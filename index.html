@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oraiyan Gold City — Pre-Launch VIP Registration</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A84C;--gold-light:#E8C96A;--gold-dim:#8B6914;--dark:#0A1F0F;--green-deep:#0D3D1E;--green-mid:#155C2C;--cream:#FDF8EE;--cream-dark:#F0E6CC;--white:#fff;--muted:#6B7B6E;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Jost',sans-serif;background:var(--dark);min-height:100vh;color:var(--white);overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 20% 20%,rgba(21,92,44,.4) 0%,transparent 60%),radial-gradient(ellipse 60% 40% at 80% 80%,rgba(13,61,30,.5) 0%,transparent 60%),linear-gradient(180deg,#0A1F0F 0%,#122918 40%,#0D3D1E 70%,#0A1F0F 100%);z-index:0;}
+body::after{content:'';position:fixed;inset:0;background-image:repeating-linear-gradient(45deg,transparent,transparent 60px,rgba(201,168,76,.015) 60px,rgba(201,168,76,.015) 61px);z-index:0;}
+.page{position:relative;z-index:1;padding:40px 20px 60px;}
+/* HEADER */
+.site-header{text-align:center;margin-bottom:40px;animation:fadeDown .7s ease both;}
+.logo-line{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:500;letter-spacing:6px;color:var(--gold);text-transform:uppercase;margin-bottom:6px;display:flex;align-items:center;justify-content:center;gap:12px;}
+.logo-line::before,.logo-line::after{content:'';width:40px;height:.5px;background:var(--gold);opacity:.6;}
+.site-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,7vw,62px);font-weight:700;color:var(--white);line-height:1.1;}
+.site-title span{color:var(--gold-light);}
+.site-tagline{font-size:13px;font-weight:300;letter-spacing:3px;color:rgba(255,255,255,.5);text-transform:uppercase;margin-top:10px;}
+.gold-rule{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px auto;}
+.gold-rule::before,.gold-rule::after{content:'';width:80px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+.grd{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);}
+.ev-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.35);border-radius:40px;padding:7px 20px;font-size:12px;font-weight:500;letter-spacing:2px;color:var(--gold-light);text-transform:uppercase;margin-top:6px;}
+.ev-badge .dot{width:7px;height:7px;background:var(--gold-light);border-radius:50%;animation:pulse 1.8s ease infinite;}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.5;transform:scale(.7);}}
+/* FORM */
+.main-card{max-width:580px;margin:0 auto;animation:fadeUp .6s ease .2s both;}
+.card-shell{background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.2);border-radius:4px;overflow:hidden;backdrop-filter:blur(10px);}
+.card-top{background:linear-gradient(135deg,var(--green-deep),var(--green-mid));border-bottom:1px solid rgba(201,168,76,.25);padding:18px 28px;display:flex;align-items:center;justify-content:space-between;}
+.card-top h2{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--white);margin-bottom:2px;}
+.card-top p{font-size:12px;color:rgba(255,255,255,.5);}
+.vip-pill{background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.4);border-radius:3px;padding:4px 12px;font-size:11px;font-weight:600;letter-spacing:2px;color:var(--gold-light);text-transform:uppercase;}
+.ev-notice{background:rgba(201,168,76,.06);border-bottom:1px solid rgba(201,168,76,.15);padding:11px 28px;display:flex;align-items:center;gap:10px;}
+.ev-notice p{font-size:12px;color:rgba(255,255,255,.55);line-height:1.5;}
+.ev-notice p strong{color:var(--gold-light);}
+.form-body{padding:28px;display:flex;flex-direction:column;gap:20px;}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.field{display:flex;flex-direction:column;gap:7px;}
+.field label{font-size:11px;font-weight:600;letter-spacing:2px;color:rgba(201,168,76,.8);text-transform:uppercase;}
+.field input{background:rgba(255,255,255,.06);border:1px solid rgba(201,168,76,.2);border-radius:3px;padding:12px 14px;font-family:'Jost',sans-serif;font-size:14px;color:var(--white);outline:none;transition:border-color .2s,background .2s;}
+.field input::placeholder{color:rgba(255,255,255,.25);}
+.field input:focus{border-color:rgba(201,168,76,.6);background:rgba(255,255,255,.09);}
+.ferr{font-size:11px;color:#ff7b7b;display:none;margin-top:-3px;}
+.dim-lbl{font-size:11px;font-weight:600;letter-spacing:2px;color:rgba(201,168,76,.8);text-transform:uppercase;margin-bottom:8px;}
+.dim-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.db{background:rgba(255,255,255,.04);border:1px solid rgba(201,168,76,.18);border-radius:3px;padding:11px 8px;text-align:center;cursor:pointer;transition:all .18s;user-select:none;}
+.db:hover{background:rgba(201,168,76,.08);border-color:rgba(201,168,76,.4);}
+.db.active{background:rgba(201,168,76,.15);border-color:var(--gold);}
+.dm{font-size:13px;font-weight:500;color:var(--white);display:block;}
+.ds{font-size:10px;color:rgba(255,255,255,.4);display:block;margin-top:3px;line-height:1.3;}
+.db.active .dm{color:var(--gold-light);}
+.db.active .ds{color:rgba(201,168,76,.6);}
+.chk-group{display:flex;flex-direction:column;gap:10px;}
+.chk-row{display:flex;align-items:flex-start;gap:12px;border-radius:3px;padding:13px 16px;cursor:pointer;border:1px solid;transition:background .2s;}
+.chk-row.green{background:rgba(30,122,58,.1);border-color:rgba(30,122,58,.3);}
+.chk-row.amber{background:rgba(201,168,76,.07);border-color:rgba(201,168,76,.25);}
+.chk-row input[type=checkbox]{width:16px;height:16px;flex-shrink:0;margin-top:2px;cursor:pointer;accent-color:var(--gold);}
+.chk-text{flex:1;}
+.chk-title{font-size:13px;font-weight:600;display:block;margin-bottom:2px;}
+.chk-row.green .chk-title{color:#6ee89a;}
+.chk-row.amber .chk-title{color:var(--gold-light);}
+.chk-desc{font-size:12px;color:rgba(255,255,255,.45);line-height:1.5;}
+.sub-btn{width:100%;padding:15px;background:linear-gradient(135deg,var(--gold-dim),var(--gold),var(--gold-light));border:none;border-radius:3px;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;letter-spacing:2.5px;color:var(--dark);text-transform:uppercase;cursor:pointer;transition:opacity .2s,transform .15s;box-shadow:0 4px 24px rgba(201,168,76,.25);margin-top:4px;}
+.sub-btn:hover{opacity:.9;}
+.sub-btn:active{transform:scale(.99);}
+.sub-btn:disabled{opacity:.6;cursor:not-allowed;}
+.disclaimer{font-size:10px;color:rgba(255,255,255,.3);line-height:1.6;text-align:center;padding-top:14px;border-top:1px solid rgba(201,168,76,.1);}
+.disclaimer strong{color:rgba(255,255,255,.45);font-style:italic;}
+.spinner-wrap{display:none;text-align:center;padding:40px 28px;color:rgba(255,255,255,.7);}
+.spinner{width:40px;height:40px;border:3px solid rgba(201,168,76,.2);border-top-color:var(--gold);border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 16px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+/* TICKET */
+#ticket-view{display:none;}
+.tkt-shell{max-width:580px;margin:0 auto;animation:fadeUp .5s ease both;}
+.tkt-head{background:linear-gradient(135deg,#0a2e14 0%,#1a5c2a 50%,#0a2e14 100%);border:1px solid rgba(201,168,76,.3);border-bottom:none;border-radius:4px 4px 0 0;overflow:hidden;}
+.tkt-head::before{content:'';display:block;height:3px;background:linear-gradient(90deg,transparent,var(--gold-light),var(--gold),var(--gold-light),transparent);}
+.tkt-head-inner{padding:18px 28px 16px;display:flex;align-items:center;gap:16px;}
+.chk-circle{width:48px;height:48px;flex-shrink:0;background:linear-gradient(135deg,#1a7a3a,#2aa855);border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px rgba(110,232,154,.15);animation:pop .4s cubic-bezier(.34,1.56,.64,1) .1s both;}
+.chk-circle svg{width:24px;height:24px;}
+@keyframes pop{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}
+.conf-lbl{font-size:10px;font-weight:600;letter-spacing:3px;color:#6ee89a;text-transform:uppercase;margin-bottom:3px;display:flex;align-items:center;gap:6px;}
+.cdot{width:5px;height:5px;background:#6ee89a;border-radius:50%;animation:pulse 1.8s ease infinite;}
+.tkt-head h2{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--white);line-height:1.1;}
+.tkt-head h2 span{color:var(--gold-light);}
+.tkt-sub{font-size:11px;color:rgba(255,255,255,.4);margin-top:3px;}
+.tkt-body{background:var(--cream);border:1px solid rgba(201,168,76,.3);border-top:none;border-radius:0 0 4px 4px;overflow:hidden;}
+.tkt-num{background:linear-gradient(135deg,#0D3D1E,#155C2C);padding:14px 28px;text-align:center;border-bottom:1px dashed rgba(201,168,76,.3);}
+.tkt-num-lbl{font-size:10px;letter-spacing:3px;color:rgba(201,168,76,.6);text-transform:uppercase;margin-bottom:4px;}
+.tkt-num-code{font-family:'Jost',sans-serif;font-size:26px;font-weight:600;color:var(--white);letter-spacing:5px;}
+.tkt-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.35);border-radius:3px;padding:3px 10px;font-size:11px;font-weight:600;color:var(--gold-light);letter-spacing:1.5px;margin-top:6px;}
+.date-notice{background:#fffbf0;border-bottom:1px solid #e8d9a0;padding:10px 28px;display:flex;align-items:flex-start;gap:10px;}
+.date-notice .dni{font-size:16px;flex-shrink:0;margin-top:1px;}
+.date-notice p{font-size:11px;font-weight:600;color:#8a6a00;margin-bottom:1px;}
+.date-notice span{font-size:11px;color:#5a4800;line-height:1.4;}
+.tkt-info{padding:12px 28px;display:grid;grid-template-columns:1fr 1fr;gap:10px;border-bottom:1px solid var(--cream-dark);}
+.ilbl{font-size:9px;font-weight:600;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:2px;}
+.ival{font-size:13px;font-weight:500;color:var(--dark);}
+.iphon{font-size:15px;font-weight:700;color:var(--green-deep);letter-spacing:1px;}
+.banner{margin:10px 28px 0;border-radius:3px;padding:9px 12px;display:none;align-items:flex-start;gap:9px;font-size:12px;line-height:1.45;}
+.banner.green{background:#eafaf1;border:1px solid #b7e4c7;color:#1a6b38;}
+.banner.blue{background:#eef4ff;border:1px solid #b5c9f5;color:#1a3a7a;}
+.banner svg{width:16px;height:16px;flex-shrink:0;margin-top:1px;}
+.tear{border:none;border-top:2px dashed rgba(201,168,76,.25);margin:8px 28px;}
+.perks-sec{padding:12px 28px;border-top:1px solid var(--cream-dark);}
+.perks-hd{font-size:9px;font-weight:600;letter-spacing:2.5px;color:var(--muted);text-transform:uppercase;margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+.perks-hd::after{content:'';flex:1;height:.5px;background:var(--cream-dark);}
+.perk{display:flex;align-items:flex-start;gap:9px;margin-bottom:8px;font-size:12px;color:#1a2e1f;line-height:1.4;}
+.perk:last-child{margin-bottom:0;}
+.pc{width:16px;height:16px;background:var(--green-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.pc svg{width:9px;height:9px;}
+.psub{font-size:10px;color:var(--muted);display:block;margin-top:1px;}
+.rpc-block{margin:0 28px 12px;background:linear-gradient(135deg,#FDF3D8,#FBE8A6);border:1px solid rgba(139,105,20,.3);border-radius:4px;padding:10px 14px;display:none;align-items:center;gap:12px;}
+.rpc-medal{width:38px;height:38px;background:linear-gradient(135deg,var(--gold-dim),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.rpc-medal svg{width:18px;height:18px;}
+.rpc-lbl{font-size:9px;font-weight:600;letter-spacing:2px;color:var(--gold-dim);text-transform:uppercase;margin-bottom:1px;}
+.rpc-val{font-family:'Cormorant Garamond',serif;font-size:14px;font-weight:700;color:#5A3D00;display:block;line-height:1.2;}
+.proj{background:#f7f3eb;border-top:1px solid var(--cream-dark);padding:10px 28px;display:flex;flex-direction:column;gap:6px;}
+.pr{display:flex;justify-content:space-between;align-items:center;font-size:12px;}
+.pr span:first-child{color:var(--muted);}
+.pr span:last-child{font-weight:500;color:var(--dark);}
+.tkt-contact{background:var(--green-deep);padding:13px 28px;display:flex;align-items:center;justify-content:space-between;}
+.tc-lbl{font-size:9px;letter-spacing:2px;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:3px;}
+.tc-num{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--white);letter-spacing:2px;}
+.tc-num span{font-size:14px;color:rgba(255,255,255,.5);font-weight:400;margin-right:3px;}
+.tc-sub{font-size:10px;color:rgba(255,255,255,.3);margin-top:2px;}
+.tc-r{text-align:right;}
+.tc-r p{font-size:11px;color:rgba(255,255,255,.4);}
+.tc-r strong{font-size:12px;color:var(--gold-light);display:block;margin-top:1px;}
+.tkt-disclaimer{background:#f2ede0;border-top:1px solid var(--cream-dark);padding:9px 28px;font-size:9px;color:#8a7a5a;line-height:1.6;font-style:italic;}
+.tkt-disclaimer strong{font-style:normal;font-weight:600;color:#6b5c3a;}
+.wa-btn{display:none;margin:10px 28px 0;background:#25D366;border-radius:3px;padding:11px 16px;align-items:center;justify-content:center;gap:8px;font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;color:#fff;text-decoration:none;text-transform:uppercase;}
+.tkt-actions{padding:12px 28px;display:flex;gap:10px;background:var(--cream);border-top:1px solid var(--cream-dark);}
+.tkt-actions button{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:9px;border-radius:3px;font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .15s;border:1px solid;}
+.btn-print{background:var(--green-deep);border-color:var(--green-deep);color:var(--white);}
+.btn-share{background:transparent;border-color:rgba(201,168,76,.4);color:var(--gold-dim);}
+.btn-new{background:transparent;border-color:var(--cream-dark);color:var(--muted);}
+.tkt-foot{font-size:10px;color:var(--muted);text-align:center;padding:8px 28px 12px;background:var(--cream);}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#0D3D1E;border:1px solid rgba(201,168,76,.4);color:var(--gold-light);padding:10px 20px;border-radius:30px;font-size:12px;font-weight:500;letter-spacing:1px;z-index:999;opacity:0;transition:opacity .3s;pointer-events:none;white-space:nowrap;}
+.toast.show{opacity:1;}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-20px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+@media(max-width:500px){.frow{grid-template-columns:1fr;}.dim-grid{grid-template-columns:repeat(2,1fr);}.form-body{padding:20px;}.tkt-info{grid-template-columns:1fr;}.tkt-actions{flex-direction:column;}.card-top{flex-direction:column;align-items:flex-start;gap:10px;}.tkt-contact{flex-direction:column;gap:10px;align-items:flex-start;}}
+@media print{body{background:#fff!important;}body::before,body::after{display:none;}.site-header,#form-view,.tkt-actions,.tkt-foot,.toast,.wa-btn{display:none!important;}#ticket-view{display:block!important;}.page{padding:0;}}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- HEADER -->
+<div class="site-header">
+  <div class="logo-line">Oraiyan Group</div>
+  <h1 class="site-title">Gold <span>City</span></h1>
+  <div class="site-tagline">Srinivasapura &middot; Kolar Road &middot; Bangalore</div>
+  <div class="gold-rule"><div class="grd"></div></div>
+  <div class="ev-badge"><div class="dot"></div>Mega Pre-Launch &mdash; Now Open</div>
+</div>
+
+<!-- FORM -->
+<div id="form-view">
+  <div class="main-card">
+    <div class="card-shell">
+      <div class="card-top">
+        <div>
+          <h2>Register for Priority Access</h2>
+          <p>Complete in under 30 seconds &middot; Receive instant VIP ticket</p>
+        </div>
+        <div class="vip-pill">VIP Access</div>
+      </div>
+      <div class="ev-notice">
+        <span style="font-size:16px;flex-shrink:0;">&#127885;</span>
+        <p><strong>Pre-Launch Date &amp; Venue</strong> will be shared exclusively with registered clients shortly by our team. Register now to be first to know.</p>
+      </div>
+      <div class="form-body" id="form-fields">
+        <div class="frow">
+          <div class="field">
+            <label for="fn">Full Name *</label>
+            <input type="text" id="fn" placeholder="Your full name" autocomplete="off">
+            <span class="ferr" id="err-name">Please enter your name</span>
+          </div>
+          <div class="field">
+            <label for="fp">WhatsApp Number *</label>
+            <input type="tel" id="fp" placeholder="10-digit number" maxlength="10" autocomplete="off">
+            <span class="ferr" id="err-phone">Enter a valid 10-digit number</span>
+          </div>
+        </div>
+        <div>
+          <div class="dim-lbl">Preferred Site Dimension *</div>
+          <div class="dim-grid">
+            <div class="db" data-val="30x40"><span class="dm">30 &times; 40 ft</span><span class="ds">1,200 sq ft</span></div>
+            <div class="db" data-val="30x50"><span class="dm">30 &times; 50 ft</span><span class="ds">1,500 sq ft</span></div>
+            <div class="db" data-val="40x60"><span class="dm">40 &times; 60 ft</span><span class="ds">2,400 sq ft</span></div>
+            <div class="db" data-val="50x80"><span class="dm">50 &times; 80 ft</span><span class="ds">4,000 sq ft</span></div>
+            <div class="db" data-val="60x90"><span class="dm">60 &times; 90 ft</span><span class="ds">5,400 sq ft</span></div>
+            <div class="db" data-val="corner"><span class="dm">Corner / Odd Site</span><span class="ds">Advisor will assist</span></div>
+          </div>
+          <span class="ferr" id="err-dim" style="margin-top:6px;">Please select a site dimension</span>
+        </div>
+        <div class="chk-group">
+          <label class="chk-row green" for="f-pri">
+            <input type="checkbox" id="f-pri">
+            <div class="chk-text">
+              <span class="chk-title">Priority Pre-Booking</span>
+              <span class="chk-desc">I want first pick of plots before the public event. I confirm I am serious about booking and will bring full details on event day.</span>
+            </div>
+          </label>
+          <label class="chk-row amber" for="f-cab">
+            <input type="checkbox" id="f-cab">
+            <div class="chk-text">
+              <span class="chk-title">Free Cab / Bus Service</span>
+              <span class="chk-desc">Applicable for serious confirmed buyers only. Our team will coordinate your pickup point and timing 24 hours before the event.</span>
+            </div>
+          </label>
+        </div>
+        <button class="sub-btn" id="sub-btn" onclick="doRegister()">Generate My Pre-Launch VIP Ticket &rarr;</button>
+        <div class="disclaimer"><strong>DISCLAIMER:</strong> This is only a conceptual and not a legal offering. The promoters and developers reserve all rights to add / delete / alter any details or specifications mentioned herein without prior notice. * T &amp; C apply.</div>
+      </div>
+      <div class="spinner-wrap" id="spinner-wrap">
+        <div class="spinner"></div>
+        <div style="font-size:14px;color:var(--gold-light);letter-spacing:1px;">Generating your VIP ticket...</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TICKET -->
+<div id="ticket-view">
+  <div class="tkt-shell">
+    <div class="tkt-head">
+      <div class="tkt-head-inner">
+        <div class="chk-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <div>
+          <div class="conf-lbl"><div class="cdot"></div>Registration Confirmed</div>
+          <h2>Pre-Launch <span>VIP Ticket</span></h2>
+          <div class="tkt-sub">Oraiyan Gold City &middot; Srinivasapura, Kolar Road</div>
+        </div>
+      </div>
+    </div>
+    <div class="tkt-body">
+      <div class="tkt-num">
+        <div class="tkt-num-lbl">Ticket Number</div>
+        <div class="tkt-num-code" id="t-code">IC-OGC-PL1001</div>
+        <div style="margin-top:8px;">
+          <span class="tkt-badge">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+            Oraiyan Gold City &middot; Pre-Launch VIP
+          </span>
+        </div>
+      </div>
+      <div class="date-notice">
+        <div class="dni">&#128233;</div>
+        <div>
+          <p>Pre-Launch Date &amp; Venue</p>
+          <span>Will be sent shortly to your registered WhatsApp number by our team. Please keep this ticket ready.</span>
+        </div>
+      </div>
+      <div class="tkt-info">
+        <div><div class="ilbl">Registered Name</div><div class="ival" id="t-name">—</div></div>
+        <div><div class="ilbl">WhatsApp Number</div><div class="iphon" id="t-phone">—</div></div>
+        <div><div class="ilbl">Site Preference</div><div class="ival" id="t-dim">—</div></div>
+        <div><div class="ilbl">Registered On</div><div class="ival" id="t-date">—</div></div>
+      </div>
+      <div class="banner blue" id="t-pri-banner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span><strong>Priority pre-booking confirmed.</strong> Our advisor will contact you within 2 hours to note your preferred plot before the public event opens.</span>
+      </div>
+      <div class="banner green" id="t-cab-banner">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        <span><strong>Free cab / bus service confirmed.</strong> Our team will WhatsApp your pickup point and timing 24 hours before the event.</span>
+      </div>
+      <hr class="tear">
+      <div class="perks-sec">
+        <div class="perks-hd">Your VIP Exclusive Benefits</div>
+        <div class="perk"><div class="pc"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div>First pick of plots before public event opens</div></div>
+        <div class="perk"><div class="pc"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div>Free due diligence consultation (Legal Opinion)</div></div>
+        <div class="perk"><div class="pc"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div>Dedicated special advisor on event day</div></div>
+        <div class="perk"><div class="pc"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div>Flexible payment plans &mdash; customized to your financial situation</div></div>
+        <div class="perk"><div class="pc"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><div>Exclusive VIP-only benefits<span class="psub">Referral incentive &nbsp;&middot;&nbsp; Legal opinion &nbsp;&middot;&nbsp; Priority reservations</span></div></div>
+      </div>
+      <div class="rpc-block" id="t-rpc-block">
+        <div class="rpc-medal"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div>
+        <div><div class="rpc-lbl">You are pre-qualified for</div><strong class="rpc-val">RPC &mdash; Royal Preferred Client Badge &middot; Oraiyan Group</strong></div>
+      </div>
+      <div class="proj">
+        <div class="ilbl" style="margin-bottom:4px;">Project Details</div>
+        <div class="pr"><span>Location</span><span>Srinivasapura, Kolar Road</span></div>
+        <div class="pr"><span>Developer</span><span>Oraiyan Group</span></div>
+        <div class="pr"><span>Township Size</span><span>120 Acres</span></div>
+        <div class="pr"><span>Approvals</span><span>DTCP + E-Khata Approved</span></div>
+        <div class="pr"><span>Starting Price</span><span>Rs. 10,00,000 Onwards</span></div>
+      </div>
+      <div class="tkt-contact">
+        <div>
+          <div class="tc-lbl">Call or WhatsApp &mdash; Pre-Launch Team</div>
+          <div class="tc-num"><span>+91</span>70197 44520</div>
+          <div class="tc-sub">Oraiyan Gold City &middot; Srinivasapura, Kolar Road</div>
+        </div>
+        <div class="tc-r"><p>Oraiyan Group</p><strong>Pre-Launch Team</strong></div>
+      </div>
+      <div class="tkt-disclaimer"><strong>DISCLAIMER:</strong> This flier is only conceptual and not a legal offering. The promoters and developers reserve all rights to add / delete / alter any details or specifications mentioned herein without prior notice. * T &amp; C apply.</div>
+      <a class="wa-btn" id="wa-btn" href="#" target="_blank" rel="noopener">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Notify My Team on WhatsApp
+      </a>
+      <div class="tkt-actions">
+        <button class="btn-print" onclick="window.print()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Save / Print
+        </button>
+        <button class="btn-share" onclick="shareTicket()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          Share Ticket
+        </button>
+        <button class="btn-new" onclick="resetForm()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+          New Registration
+        </button>
+      </div>
+      <div class="tkt-foot">Screenshot or print this ticket &nbsp;&middot;&nbsp; Present at the pre-launch event for priority access</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- .page -->
+<div class="toast" id="toast"></div>
+
+<script>
+var SHEET  = 'https://script.google.com/macros/s/AKfycbyt4jSkANE_hERjhn0pThSGA6blh10wT-LGLR-KYzUkCAB372BKnrDPt80_mSIMOBOO/exec';
+var WA     = '917019744520';
+var selDim = '';
+var cData  = {};
+
+// ── PERSISTENT SEQUENTIAL COUNTER ──
+// localStorage keeps the counter across page reloads on the same device.
+// The timestamp suffix ensures uniqueness across different devices/browsers.
+function getNextTicket() {
+  var stored = parseInt(localStorage.getItem('ogc_ticket_cnt') || '1000', 10);
+  var next   = stored + 1;
+  localStorage.setItem('ogc_ticket_cnt', next);
+  // Add last 3 digits of timestamp as device-unique suffix
+  var suffix = String(Date.now()).slice(-3);
+  return 'IC-OGC-PL' + next + '-' + suffix;
+}
+
+document.querySelectorAll('.db').forEach(function(b) {
+  b.addEventListener('click', function() {
+    document.querySelectorAll('.db').forEach(function(x){ x.classList.remove('active'); });
+    b.classList.add('active');
+    selDim = b.getAttribute('data-val');
+    document.getElementById('err-dim').style.display = 'none';
+  });
+});
+
+function showE(id, show) {
+  document.getElementById(id).style.display = show ? 'block' : 'none';
+}
+
+function fmtDim(v) {
+  var m = {
+    '30x40':'30x40 ft (1,200 sq ft)',
+    '30x50':'30x50 ft (1,500 sq ft)',
+    '40x60':'40x60 ft (2,400 sq ft)',
+    '50x80':'50x80 ft (4,000 sq ft)',
+    '60x90':'60x90 ft (5,400 sq ft)',
+    'corner':'Corner / Odd Site'
+  };
+  return m[v] || v;
+}
+
+function fmtDate() {
+  return new Date().toLocaleDateString('en-IN', {day:'2-digit', month:'short', year:'numeric'});
+}
+
+function fmtTime() {
+  return new Date().toLocaleTimeString('en-IN', {hour:'2-digit', minute:'2-digit', hour12:true});
+}
+
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(function(){ t.classList.remove('show'); }, 3000);
+}
+
+function doRegister() {
+  var name  = document.getElementById('fn').value.trim();
+  var phone = document.getElementById('fp').value.trim();
+  var pri   = document.getElementById('f-pri').checked;
+  var cab   = document.getElementById('f-cab').checked;
+  var ok    = true;
+
+  showE('err-name',  !name);                     if (!name)                     ok = false;
+  showE('err-phone', !/^\d{10}$/.test(phone));   if (!/^\d{10}$/.test(phone))   ok = false;
+  showE('err-dim',   !selDim);                   if (!selDim)                   ok = false;
+  if (!ok) return;
+
+  var ticket  = getNextTicket();
+  var dateStr = fmtDate();
+  var timeStr = fmtTime();
+  var dim     = fmtDim(selDim);
+
+  document.getElementById('form-fields').style.display  = 'none';
+  document.getElementById('spinner-wrap').style.display = 'block';
+  document.getElementById('sub-btn').disabled = true;
+
+  cData = { ticket:ticket, name:name, rawPhone:phone, dimension:dim, pri:pri, cab:cab };
+
+  // Fire and forget — no await, no blocking
+  try {
+    fetch(SHEET, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ticket:ticket, name:name, phone:'+91'+phone, dimension:dim, priority:pri, cab:cab, date:dateStr+' '+timeStr })
+    });
+  } catch(e) {}
+
+  // Populate ticket
+  document.getElementById('t-code').textContent  = ticket;
+  document.getElementById('t-name').textContent  = name;
+  document.getElementById('t-phone').textContent = '+91 ' + phone.slice(0,5) + ' ' + phone.slice(5);
+  document.getElementById('t-dim').textContent   = dim;
+  document.getElementById('t-date').textContent  = dateStr;
+
+  document.getElementById('t-pri-banner').style.display  = pri ? 'flex' : 'none';
+  document.getElementById('t-cab-banner').style.display  = cab ? 'flex' : 'none';
+  document.getElementById('t-rpc-block').style.display   = pri ? 'flex' : 'none';
+
+  // Build WhatsApp alert link — user taps it directly (no popup blocker)
+  var waMsg = 'NEW REGISTRATION - Oraiyan Gold City' +
+    '\nTicket: ' + ticket +
+    '\nName: '   + name +
+    '\nPhone: +91' + phone +
+    '\nSite: '   + dim +
+    '\nPriority: ' + (pri ? 'YES' : 'No') +
+    '\nCab/Bus: '  + (cab ? 'YES' : 'No') +
+    '\nTime: '   + dateStr + ' ' + timeStr;
+
+  var waBtn = document.getElementById('wa-btn');
+  waBtn.href = 'https://wa.me/' + WA + '?text=' + encodeURIComponent(waMsg);
+  waBtn.style.display = 'flex';
+
+  // Switch views
+  document.getElementById('spinner-wrap').style.display = 'none';
+  document.getElementById('form-view').style.display    = 'none';
+  document.getElementById('ticket-view').style.display  = 'block';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  showToast('Registration confirmed!');
+}
+
+function resetForm() {
+  document.getElementById('fn').value = '';
+  document.getElementById('fp').value = '';
+  document.getElementById('f-pri').checked = false;
+  document.getElementById('f-cab').checked = false;
+  document.querySelectorAll('.db').forEach(function(b){ b.classList.remove('active'); });
+  selDim = '';
+  ['err-name','err-phone','err-dim'].forEach(function(id){ showE(id, false); });
+  document.getElementById('form-fields').style.display  = 'flex';
+  document.getElementById('spinner-wrap').style.display = 'none';
+  document.getElementById('sub-btn').disabled = false;
+  document.getElementById('form-view').style.display    = 'block';
+  document.getElementById('ticket-view').style.display  = 'none';
+  document.getElementById('wa-btn').style.display       = 'none';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function shareTicket() {
+  var d = cData;
+  var p = d.rawPhone;
+  var text = 'Oraiyan Gold City - Pre-Launch VIP Ticket' +
+    '\nName: '   + d.name +
+    '\nTicket: ' + d.ticket +
+    '\nPhone: +91 ' + p.slice(0,5) + ' ' + p.slice(5) +
+    '\nSite: '   + d.dimension +
+    (d.cab ? '\nCab/Bus: Confirmed' : '') +
+    (d.pri ? '\nRPC Badge: Pre-Qualified' : '') +
+    '\n\nEnquiries: WhatsApp +91 70197 44520' +
+    '\nOraiyan Gold City, Srinivasapura, Kolar Road';
+  if (navigator.share) {
+    navigator.share({ title: 'Oraiyan Gold City VIP Ticket', text: text });
+  } else {
+    navigator.clipboard.writeText(text).then(function(){ showToast('Ticket copied!'); });
+  }
+}
+</script>
+</body>
+</html>
